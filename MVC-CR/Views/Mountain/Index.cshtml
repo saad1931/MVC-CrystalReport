@@ -1,0 +1,64 @@
+﻿@model IEnumerable<MVC_CR.Table>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a class="btn btn-primary" href="@Url.Action("ExportMountains")">Download Details</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Rank)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mountain)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HeightInMeter)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HeightInFt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProminenceInMeter)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ParentMountain)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rank)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mountain)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HeightInMeter)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HeightInFt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProminenceInMeter)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ParentMountain)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

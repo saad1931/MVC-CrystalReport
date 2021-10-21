@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="Database1Entities">
+    <EntitySetMapping Name="Tables">
+      <EntityTypeMapping TypeName="Database1Model.Table">
+        <MappingFragment StoreEntitySet="Table">
+          <ScalarProperty Name="Rank" ColumnName="Rank" />
+          <ScalarProperty Name="Mountain" ColumnName="Mountain" />
+          <ScalarProperty Name="HeightInMeter" ColumnName="HeightInMeter" />
+          <ScalarProperty Name="HeightInFt" ColumnName="HeightInFt" />
+          <ScalarProperty Name="ProminenceInMeter" ColumnName="ProminenceInMeter" />
+          <ScalarProperty Name="ParentMountain" ColumnName="ParentMountain" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
